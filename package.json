@@ -3,10 +3,17 @@
     "description": "Mapeamento objeto-relacional aplicado a APIs",
     "url": "http://relational.99xp.org",
     "author": "Bruno Foggia",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "main": "dist/relational.min.js",
     "type": "module",
     "license": "MIT",
+    "scripts": {
+        "test": "mocha",
+        "build": "npm run minify",
+        "minify": "node ./terser.js",
+        "doc": "docco src/*.js -l linear -l ../../../docs/template/",
+        "lint": "eslint src/*.js"
+    },
     "devDependencies": {
         "axios": "^0.27.2",
         "chai": "^4.3.6",
